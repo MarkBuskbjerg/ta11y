@@ -1,0 +1,45 @@
+/*========== Typography ==========*/
+
+/* headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	@apply font-bold leading-tight;
+}
+
+h1 {
+	@apply text-5xl;
+}
+
+h2 {
+	@apply text-3xl;
+}
+
+h3 {
+	@apply text-xl;
+}
+
+h4 {
+	@apply text-lg;
+}
+/* paragraph */
+.content p {
+	@apply mb-8 text-lg;
+}
+
+/* intro paragraph */
+.content p:first-child {
+	@apply text-xl leading-snug;
+}
+
+/* link */
+.content a {
+	@apply font-semibold border-b-2 border-purple-800 transition duration-300 ease-in-out;
+}
+
+.content a:hover {
+	@apply text-purple-800;
+}
