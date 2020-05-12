@@ -1,6 +1,6 @@
 const prod = process.env.NODE_ENV === 'production';
 const purge = {
-	content: ['src/**/*.js', 'src/**/*.njk', 'src/**/*.svg'],
+	content: ['src/**/*.js', 'src/**/*.njk'],
 	extractors: [
 		{
 			extractor: (value) => value.match(/[A-z0-9-:%/]+/g) || [],

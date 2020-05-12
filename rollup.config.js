@@ -2,7 +2,6 @@ import commonjs from '@rollup/plugin-commonjs';
 import postcss from 'rollup-plugin-postcss';
 import replace from '@rollup/plugin-replace';
 import resolve from '@rollup/plugin-node-resolve';
-import svg from 'rollup-plugin-svg';
 import { terser } from 'rollup-plugin-terser';
 
 const prod = process.env.NODE_ENV == 'production';
@@ -19,7 +18,6 @@ export default {
 		replace({
 			DEV_MODE: !prod,
 		}),
-		svg(),
 		postcss({
 			extract: 'main.bundle.css',
 			minimize: prod,

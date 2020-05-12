@@ -23,9 +23,10 @@
 </head>
 <body>
   {% include 'components/header.njk' %}
-  <div class="container mx-auto px-4 max-w-2xl">
+  <div class="container mx-auto px-4 md:pt-20 md:pb-20 max-w-2xl border-b-2 border-purple-800">
     {{ content | safe }}
   </div>
+  {% include 'components/footer.njk' %}
 
   <script src="../assets/main.bundle.js"></script>
 </body>

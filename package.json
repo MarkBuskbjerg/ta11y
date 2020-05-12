@@ -1,6 +1,6 @@
 {
 	"name": "ta11y",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"description": "A simple 11ty starter project with complete TailwindCSS integration",
 	"main": "index.js",
 	"scripts": {
@@ -8,7 +8,7 @@
 		"build": "cross-env NODE_ENV=production npm-run-all clean -p build:*",
 		"build:11ty": "eleventy --quiet",
 		"build:rollup": "rollup -c",
-		"clean": "rimraf dist",
+		"clean": "rimraf public",
 		"dev": "npm-run-all clean build:* -p dev:*",
 		"dev:11ty": "eleventy --serve --quiet",
 		"dev:rollup": "rollup -c -w"
@@ -45,7 +45,6 @@
 		"rimraf": "^3.0.2",
 		"rollup": "^2.8.0",
 		"rollup-plugin-postcss": "^3.1.1",
-		"rollup-plugin-svg": "^2.0.0",
 		"rollup-plugin-terser": "^5.3.0",
 		"tailwindcss": "^1.4.4"
 	}
