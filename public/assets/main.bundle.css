@@ -654,7 +654,8 @@ h4 {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.content a:hover {
+.content a:hover,
+.content a:focus {
   --text-opacity: 1;
   color: #553c9a;
   color: rgba(85, 60, 154, var(--text-opacity));
@@ -690,6 +691,47 @@ h4 {
   .container {
     max-width: 1280px;
   }
+}
+
+.button {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 9999px;
+  border-width: 1px;
+  background-color: transparent;
+  --text-opacity: 1;
+  color: #44337a;
+  color: rgba(68, 51, 122, var(--text-opacity));
+  --border-opacity: 1;
+  border-color: #d6bcfa;
+  border-color: rgba(214, 188, 250, var(--border-opacity));
+  margin-top: 3rem;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button:hover,
+.button:focus {
+  --bg-opacity: 1;
+  background-color: #d6bcfa;
+  background-color: rgba(214, 188, 250, var(--bg-opacity));
+  --border-opacity: 1;
+  border-color: #d6bcfa;
+  border-color: rgba(214, 188, 250, var(--border-opacity));
+  --text-opacity: 1;
+  color: #44337a;
+  color: rgba(68, 51, 122, var(--text-opacity));
+}
+
+@media (min-width: 1024px) {
+  @apply py-2 px-2 text-sm;
+}
+
+@media (min-width: 1280px) {
+  @apply py-3 px-4 text-base;
 }
 
 /* Utilities */

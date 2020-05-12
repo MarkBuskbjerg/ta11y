@@ -22,32 +22,32 @@
   <link rel="stylesheet" href="../assets/main.bundle.css">
 </head>
 <body>
-  <nav class="max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-5xl mx-auto w-full">
-  <div class="lg:flex lg:items-center lg:justify-left pb-8 pt-6 px-4 lg:px-0">
-    <div class="flex items-center justify-between text-black w-full lg:w-1/4">
+  <nav class="max-w-2xl lg:max-w-5xl xl:max-w-5xl mx-auto px-4">
+  <div class="flex flex-wrap justify-between lg:items-center lg:justify-left pb-8 pt-6 lg:px-0">
+    <div class="flex w-1/2 items-center justify-center italic text-black lg:w-1/4 bg-purple-300">
       <a href="#" title="Ta11y starter project">
         <span class="font-semibold text-2xl tracking-tight">ta11y</span><span class="text-2xl tracking-tight">.io</span>
       </a>
-    <div class="flex lg:hidden">
-      <button type="button" class="px-2 text-black hover:text-black focus:outline-none focus:text-black"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6 fill-current"><!----> <path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path></svg></button>
-    </div>
+  </div>
+  <div class="flex justify-end w-1/2 lg:hidden">
+      <button id="navTrigger" type="button" class="px-2 text-black hover:text-black focus:text-black"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6 fill-current"><!----> <path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path></svg></button>
   </div> 
-  <ul class="pt-8 lg:pt-0 lg:flex lg:items-center lg:justify-center lg:w-2/4 hidden">
-    <li class="block py-2 lg:px-4">
+  <ul id="primaryNav" class="pt-2 lg:pt-0 flex lg:items-center lg:justify-center w-full lg:w-2/4 lg:flex lg:block hidden">
+    <li class="block py-2 px-4">
       <a href="" title="Features" class="text-gray-800 hover:text-black">Features</a>
     </li>
-    <li class="block py-2 lg:px-4">
+    <li class="block py-2 px-4">
       <a href="" title="Features" class="text-gray-800 hover:text-black">Requirements</a>
     </li>
-    <li class="block py-2 lg:px-4">
+    <li class="block py-2 px-4">
       <a href="" title="Pricing" class="text-gray-800 hover:text-black">Pricing</a></li>
     </ul> 
-    <ul class="pt-8 -my-2 lg:pt-0 lg:flex lg:items-center lg:justify-end lg:w-1/4 hidden">
+    <ul id="ctaBlock" class="pt-8 -my-2 lg:pt-0 lg:flex lg:items-center lg:justify-between lg:w-1/4 hidden">
       <li class="block mb-3 lg:mb-0 py-2 lg:px-4">
-        <a href="" title="Login" class="text-gray-800 hover:text-black">Log ind</a>
+        <a href="" title="Login" class="text-gray-800 hover:text-black">Log in</a>
       </li>
       <li class="block py-2">
-        <a href="#" title="Start here" class="py-3 px-4 rounded border border-gray-800 text-gray-800 mt-12 lg:py-2 lg:px-2 lg:text-sm xl:py-3 xl:px-4 xl:text-base hover:text-black">Start your free trial</a>
+        <a href="#" title="Start here" class="button">Start your free trial</a>
       </li>
     </ul>
   </div>
