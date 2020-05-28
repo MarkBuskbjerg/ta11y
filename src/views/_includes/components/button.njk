@@ -1,0 +1,8 @@
+{% macro button(text, type) %}
+  {% if type === "button" %}
+    <button type="button" class="button">{{ text }}</button>
+  {% else %}
+    <button type="submit" class="button">{{ text }}</button>
+  {% endif %}
+
+{% endmacro %}
