@@ -1,5 +1,5 @@
 .button {
-	@apply py-3 px-4 rounded-full border bg-transparent text-purple-900 border-purple-300 mt-12 transition duration-300 ease-in-out;
+	@apply py-3 px-4 rounded-full border bg-transparent text-purple-900 border-purple-300 transition duration-300 ease-in-out;
 }
 
 .button:hover,

@@ -707,7 +707,6 @@ h4 {
   --border-opacity: 1;
   border-color: #d6bcfa;
   border-color: rgba(214, 188, 250, var(--border-opacity));
-  margin-top: 3rem;
   transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
   transition-duration: 300ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
