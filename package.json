@@ -5,11 +5,11 @@
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"build": "cross-env NODE_ENV=production npm-run-all clean -p build:*",
-		"build:11ty": "eleventy --quiet",
-		"build:rollup": "rollup -c",
+		"prod": "cross-env NODE_ENV=production npm-run-all clean -p prod:*",
+		"prod:11ty": "eleventy --quiet",
+		"prod:rollup": "rollup -c",
 		"clean": "rimraf public",
-		"dev": "npm-run-all clean build:* -p dev:*",
+		"dev": "npm-run-all clean prod:* -p dev:*",
 		"dev:11ty": "eleventy --serve --quiet",
 		"dev:rollup": "rollup -c -w"
 	},
