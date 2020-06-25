@@ -22,9 +22,12 @@
   <link rel="stylesheet" href="../assets/main.bundle.css">
 </head>
 <body>
+  <a class="skip-link border-0 h-auto m-0 p-0 overflow-hidden absolute w-0 whitespace-no-wrap top-0 left-0 bg-purple-900 text-white focus:inline-block focus:p-4 focus:w-auto " href="#main-content">Skip to main content</a>
   {% include 'components/header.njk' %}
   <div class="container mx-auto px-4 md:pt-20 md:pb-20 max-w-2xl border-b-2 border-purple-800">
+    <main id="main-content" tabindex="-1">
     {{ content | safe }}
+    </main>
   </div>
   {% include 'components/footer.njk' %}
 

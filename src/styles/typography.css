@@ -1,5 +1,7 @@
 /*========== Typography ==========*/
-
+* {
+	@apply text-gray-900;
+}
 /* headings */
 h1,
 h2,
@@ -11,11 +13,11 @@ h6 {
 }
 
 h1 {
-	@apply text-5xl;
+	@apply text-5xl leading-none mb-16;
 }
 
 h2 {
-	@apply text-3xl;
+	@apply text-3xl mb-4;
 }
 
 h3 {
