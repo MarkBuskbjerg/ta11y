@@ -4,6 +4,8 @@ A simple boilerplate built with Eleventy and TailwindCSS.
 
 This is a personal project and I'm still developing and tailoring it to my exact needs. I use it as my personal boilerplate for new projects. Hopefully you'll find inspiration or a good use for it yourself.
 
+I found a lot of inspiration from other open starter packs on 11ty.dev. Special thanks to Skeleventy and Ta11ls.
+
 ## Features
 
 -   Get started with a sim
