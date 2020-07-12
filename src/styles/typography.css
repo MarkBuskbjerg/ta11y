@@ -25,16 +25,16 @@ h3 {
 }
 
 h4 {
-	@apply text-lg;
+	@apply text-lg font-bold;
 }
 /* paragraph */
 .content p {
-	@apply mb-8 text-lg;
+	@apply mb-8;
 }
 
 /* intro paragraph */
 .content p:first-child {
-	@apply text-xl leading-snug;
+	@apply text-xl leading-snug font-bold;
 }
 
 /* link */
