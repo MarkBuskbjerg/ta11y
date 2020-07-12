@@ -1,0 +1,17 @@
+.navigation-trigger {
+	@apply border-0 px-2 text-black;
+}
+
+.navigation-trigger:hover,
+.navigation-trigger:focus {
+	@apply bg-transparent;
+}
+
+.nav-item {
+	@apply text-gray-800;
+}
+
+.nav-item:hover,
+.nav-item:focus {
+	@apply text-black;
+}

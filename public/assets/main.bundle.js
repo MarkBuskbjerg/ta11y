@@ -13,6 +13,7 @@
 		} else {
 			navTrigger.classList.remove('open');
 			ctaBlock.classList.add('hidden');
+			primaryNav.classList.add('hidden');
 		}
 	}
 

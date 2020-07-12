@@ -690,6 +690,33 @@ input {
   border-color: rgba(74, 85, 104, var(--border-opacity));
 }
 
+.navigation-trigger {
+  border-width: 0;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  --text-opacity: 1;
+  color: #000;
+  color: rgba(0, 0, 0, var(--text-opacity));
+}
+
+.navigation-trigger:hover,
+.navigation-trigger:focus {
+  background-color: transparent;
+}
+
+.nav-item {
+  --text-opacity: 1;
+  color: #2d3748;
+  color: rgba(45, 55, 72, var(--text-opacity));
+}
+
+.nav-item:hover,
+.nav-item:focus {
+  --text-opacity: 1;
+  color: #000;
+  color: rgba(0, 0, 0, var(--text-opacity));
+}
+
 /* purgecss end ignore */
 
 /* Components */
@@ -723,9 +750,7 @@ input {
 }
 
 .button,
-button,
-.content button,
-.content .button {
+button {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   padding-left: 1rem;
@@ -745,6 +770,8 @@ button,
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+button:hover,
+button:focus,
 .button:hover,
 .button:focus {
   --bg-opacity: 1;
@@ -759,11 +786,15 @@ button,
 }
 
 @media (min-width: 1024px) {
-  @apply py-2 px-2 text-sm;
+  .button,
+	button {
+  }
 }
 
 @media (min-width: 1280px) {
-  @apply py-3 px-4 text-base;
+  .button,
+	button {
+  }
 }
 
 /* Utilities */
