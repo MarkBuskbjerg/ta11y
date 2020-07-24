@@ -1,3 +1,4 @@
+const pluginTOC = require('eleventy-plugin-toc');
 /* eslint-disable */
 
 module.exports = function (eleventyConfig) {
@@ -8,6 +9,8 @@ module.exports = function (eleventyConfig) {
 		files: ['public/**/*'],
 		open: true,
 	});
+
+	eleventyConfig.addPlugin(pluginTOC);
 
 	return {
 		dir: {

@@ -19,7 +19,7 @@
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
 
-  <link rel="stylesheet" href="../assets/main.bundle.css">
+  <link rel="stylesheet" href="{{ site.url }}/assets/main.bundle.css">
 </head>
 <body>
   <a class="skip-link border-0 h-auto m-0 p-0 overflow-hidden absolute w-0 whitespace-no-wrap top-0 left-0 bg-purple-900 text-white focus:inline-block focus:p-4 focus:w-auto " href="#main-content">Skip to main content</a>
@@ -28,6 +28,9 @@
     <main id="main-content" tabindex="-1">
     {{ content | safe }}
     </main>
+    <aside>
+    {{ content | toc | safe }}
+    </aside>
   </div>
   {% include 'components/footer.njk' %}
 

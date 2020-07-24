@@ -47,5 +47,8 @@
 		"rollup-plugin-postcss": "^3.1.1",
 		"rollup-plugin-terser": "^5.3.0",
 		"tailwindcss": "^1.4.4"
+	},
+	"dependencies": {
+		"eleventy-plugin-toc": "^1.0.1"
 	}
 }
