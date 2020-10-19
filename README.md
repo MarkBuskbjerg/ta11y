@@ -44,3 +44,11 @@ Well. I needed something specifically tailored for my own projects. I've open-so
 
 If you find it helpful in any way => I'm happy.
 If you have questions => Don't be a stranger :)
+
+## Roadmap and ideas
+
+Well. Just stuff I'd love to discover and get a handle on with this starter project.
+
+-   Better dates (implement some sort of date filter)
+-   Draft option in frontmatter only output the single file in development and with a [draft] notice.
+-   Content with publish dates in the future will only be visible in development and with a [scheduled] notice
