@@ -4,21 +4,21 @@ A simple boilerplate built with Eleventy and TailwindCSS.
 
 This is a personal project and I'm still developing and tailoring it to my exact needs. I use it as my personal boilerplate for new projects. Hopefully you'll find inspiration or a good use for it yourself.
 
-I found a lot of inspiration from other open starter packs on 11ty.dev. Special thanks to Skeleventy and Ta11ls.
+I found a lot of inspiration from other open starter packs on 11ty.dev. Special thanks to [Skeleventy](https://github.com/josephdyer/skeleventy) and [Ta11ls](https://github.com/danfascia/tai11s). A lot of my structure is inspired by those starters.
 
 ## Features
 
--   Get started with a sim
--   PurgeCSS to remove unused CSS
--   Built with accessibility (A11Y) in mind
--   Layouts are build with Search Engine Optimization (SEO) in mind
--   Buildproces using rollup.js
--   Blog / article section ready with categories
--   Templated with Nunjucks (.njk)
+-   Get started with a simple build process.
+-   PurgeCSS to remove unused CSS.
+-   Built with accessibility (A11Y) in mind - feel free to suggest optimizations.
+-   Layouts are build with Search Engine Optimization (SEO) in mind.
+-   Buildproces using rollup.js.
+-   Blog / article section ready with categories.
+-   Templated with Nunjucks (.njk).
 
 ## Installation
 
-Download to your preferred local older and run 'npm install' from your terminal.
+Download to your preferred local folder and run 'npm install' from your terminal.
 
 To start developing type:
 'npm run dev'
