@@ -19,15 +19,17 @@ I found a lot of inspiration from other open starter packs on 11ty.dev. Special 
 
 ## Installation
 
-Download to your preferred local folder and run 'npm install' from your terminal.
+Download to your preferred local folder and run `npm install` from your terminal.
 
-To start developing type:
-'npm run dev'
+To **start developing** type:
+
+`npm run dev`
 
 Your new Ta11y site will build and run in your preferred browser.
 
-To run in production type:
-'npm run prod'
+To **run in production** type:
+
+`npm run prod`
 
 This displays everything totally purged and without any drafts and scheduled posts visible.
 
