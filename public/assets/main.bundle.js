@@ -23,8 +23,8 @@
 		}
 	});
 
-	// true gets replaced at build time based on ENV!
 	{
+		// true gets replaced at build time based on ENV!
 		console.log('Dev mode is currently enabled.');
 	}
 

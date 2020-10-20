@@ -1,12 +1,13 @@
 ---
 title: Learn webdevelopment
 layout: base
+permalink: /posts/
 ---
 
 <h1>Learn webdevelopment</h1>
 
 <ul>
-  {%- for post in collections.post -%}
+  {%- for post in collections.posts -%}
     <div class="my-12">
       <p class="text-sm leading-5 text-gray-500">
         {% if post.data.date %}
@@ -15,9 +16,9 @@ layout: base
           <time datetime="">{{ page.date.toString() }}</time>
         {% endif %}
       </p>
-      <a href="#" class="block">
+      <a href="{{ post.url }}" class="block">
         <h2 class="mt-2 text-xl leading-7 font-semibold text-gray-900">
-          {{post.data.title}}
+          {{ post.data.title }}
         </h2>
         <p class="mt-3 text-base leading-6 text-gray-500">
             Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.
@@ -25,8 +26,8 @@ layout: base
       </a>
       <div class="mt-3">
         <a href="{{ post.url }}" class="text-base leading-6 font-semibold text-indigo-600 hover:text-indigo-500 transition ease-in-out duration-150">
-            Read full story
-          </a>
+          Read full story
+        </a>
       </div>
     </div>
 

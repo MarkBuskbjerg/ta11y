@@ -9,7 +9,7 @@
 		"prod:11ty": "eleventy --quiet",
 		"prod:rollup": "rollup -c",
 		"clean": "rimraf public",
-		"dev": "npm-run-all clean prod:* -p dev:*",
+		"dev": "cross-env NODE_ENV=development npm-run-all clean prod:* -p dev:*",
 		"dev:11ty": "eleventy --serve --quiet",
 		"dev:rollup": "rollup -c -w"
 	},
@@ -30,7 +30,7 @@
 	},
 	"homepage": "https://github.com/MarkBuskbjerg/ta11y#readme",
 	"devDependencies": {
-		"@11ty/eleventy": "^0.10.0",
+		"@11ty/eleventy": "^0.11.0",
 		"@fullhuman/postcss-purgecss": "^2.2.0",
 		"@rollup/plugin-commonjs": "^11.1.0",
 		"@rollup/plugin-node-resolve": "^7.1.3",
