@@ -58,3 +58,4 @@ Well. Just stuff I'd love to discover and get a handle on with this starter proj
 -   Better dates (implement some sort of date filter).
 -   Content with publish dates in the future is only visible in development. But I want to give them a clear [Scheduled] notice.
 -   Better visuals for the navigation on small screens. Right now this is barely handled.
+-   Custom 404
