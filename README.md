@@ -6,6 +6,8 @@ This is a personal project and I'm still developing and tailoring it to my exact
 
 I found a lot of inspiration from other open starter packs on 11ty.dev. Special thanks to [Skeleventy](https://github.com/josephdyer/skeleventy) and [Ta11ls](https://github.com/danfascia/tai11s). A lot of my structure is inspired by those starters.
 
+I try have it setup with a nice and simple starter design. But my main focus is to implement more technical parts like easy draft, scheduled post and navigation functionality.
+
 ## Features
 
 -   Get started with a simple build process.
@@ -13,7 +15,7 @@ I found a lot of inspiration from other open starter packs on 11ty.dev. Special 
 -   Built with accessibility (A11Y) in mind - feel free to suggest optimizations.
 -   Layouts are build with Search Engine Optimization (SEO) in mind.
 -   Buildproces using rollup.js.
--   Blog / article section ready with categories.
+-   Blog / article section (will be ready with categories).
 -   Templated with Nunjucks (.njk).
 -   Easily handle drafts and scheduled posts both in production and development mode
 
@@ -61,3 +63,7 @@ Well. Just stuff I'd love to discover and get a handle on with this starter proj
 -   Content with publish dates in the future is only visible in development. But I want to give them a clear [Scheduled] notice.
 -   Better visuals for the navigation on small screens. Right now this is barely handled.
 -   Custom 404
+-   Add a contact form
+-   Write about how the site is setup
+-   Create a structure for categories across the site
+-   Perhaps create some basic connection to Netlify CMS
