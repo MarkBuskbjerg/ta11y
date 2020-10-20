@@ -67,3 +67,4 @@ Well. Just stuff I'd love to discover and get a handle on with this starter proj
 -   Write about how the site is setup
 -   Create a structure for categories across the site
 -   Perhaps create some basic connection to Netlify CMS
+-   Better template-data in the <head> of the page. Right now it is lacking a lot.
