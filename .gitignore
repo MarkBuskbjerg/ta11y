@@ -104,4 +104,6 @@ dist
 .tern-port
 
 # public folder
-/public
+public/
+public/assets/main.bundle.css
+public/assets/main.bundle.css
