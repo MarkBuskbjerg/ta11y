@@ -1,6 +1,6 @@
 // tailwind.config.js
 module.exports = {
-	//purge: ['./src/**/*.html', './src/views/**/*.njk', '*.njk'],
+	purge: false, // This is handled through postcss.config.js
 	theme: {},
 	variants: {
 		accessibility: ['responsive', 'focus'],

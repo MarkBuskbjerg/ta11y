@@ -15,6 +15,7 @@ I found a lot of inspiration from other open starter packs on 11ty.dev. Special 
 -   Buildproces using rollup.js.
 -   Blog / article section ready with categories.
 -   Templated with Nunjucks (.njk).
+-   Easily handle drafts and scheduled posts both in production and development mode
 
 ## Installation
 
@@ -24,6 +25,11 @@ To start developing type:
 'npm run dev'
 
 Your new Ta11y site will build and run in your preferred browser.
+
+To run in production type:
+'npm run prod'
+
+This displays everything totally purged and without any drafts and scheduled posts visible.
 
 ## Folder structure
 
@@ -49,6 +55,6 @@ If you have questions => Don't be a stranger :)
 
 Well. Just stuff I'd love to discover and get a handle on with this starter project.
 
--   Better dates (implement some sort of date filter)
--   Draft option in frontmatter only output the single file in development and with a [draft] notice.
--   Content with publish dates in the future will only be visible in development and with a [scheduled] notice
+-   Better dates (implement some sort of date filter).
+-   Content with publish dates in the future is only visible in development. But I want to give them a clear [Scheduled] notice.
+-   Better visuals for the navigation on small screens. Right now this is barely handled.
