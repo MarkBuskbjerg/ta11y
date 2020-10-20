@@ -5,7 +5,7 @@ module.exports = async () => {
 		eleventyComputed: {
 			permalink(data) {
 				// TODO: Check if this is on production or development environment
-				// If NOT Production build, process all .md files in this directory 
+				// If NOT Production build, process all files in this directory 
 				if (process.env.ELEVENTY_ENV !== 'production') {
 					return data.permalink || '/posts/{{ title | slug }}/index.html';
 				} else {
