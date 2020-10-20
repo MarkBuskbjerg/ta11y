@@ -6,19 +6,24 @@ module.exports = function (eleventyConfig) {
 
 	eleventyConfig.addCollection('posts', collection => {
 		// Check if draft is true in frontmatter - used to exclude from the collection
-		const isLive = post => !post.data.draft && post.date <= new Date();
+		const isLive = post => !post.data.draft;
+		// Check if date of a post is set in the future
+		const isScheduled = post => post.date <= new Date();
+		// Removes the index.njk from the collection
 		const isIndex = post => !post.inputPath.includes('index.njk');
-		// Return all posts - including drafts - when in development environment
-		if (process.env.ELEVENTY_ENV !== 'production')
+
+		if (process.env.ELEVENTY_ENV !== 'production') {
+			// Return all posts - including drafts - when in development environment
 			return collection
 				.getFilteredByGlob('**/*.njk')
 				.filter(isIndex)
 				.reverse();
-		else {
-			// TODO: Figure out a way to get only from posts folder
+		} else {
+			// Return the filtered and ready for production list of posts
 			return collection
 				.getFilteredByGlob('**/*.njk')
 				.filter(isLive)
+				.filter(isScheduled)
 				.filter(isIndex)
 				.reverse();
 		}

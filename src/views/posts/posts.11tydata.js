@@ -9,7 +9,7 @@ module.exports = async () => {
 				if (process.env.ELEVENTY_ENV !== 'production') {
 					return data.permalink || '/posts/{{ title | slug }}/index.html';
 				} else {
-					if (!data.draft) {
+					if (!data.draft || new Date(data.date) <= new Date()) {
 						// Return the original set permalink from frontmatter OR create a new slug for the post
 						return data.permalink || '/posts/{{ title | slug }}/index.html';
 					}
