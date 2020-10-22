@@ -6,5 +6,13 @@ layout: base
     <span class="font-bold text-red-500"> [ DRAFT ] </span>
   {% endif %}{{ title }}
 </h1>
+<!-- TODO: Set a date from page.date or something if no date is present in frontmatter -->
+<p>Published: 
+  {% if date %}
+    {{ date | dateFilter }}
+  {% else %}
+    {{ page.date | dateFilter }}
+  {% endif %}
+</p>
 
 {{ content | safe }}

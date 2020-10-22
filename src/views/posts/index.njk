@@ -9,10 +9,11 @@ permalink: /posts/
 {%- for post in collections.posts -%}
   <div class="my-12">
     <p class="text-sm leading-5 text-gray-700">
+      Published:
       {% if post.data.date %}
-        <time datetime="2020-03-16">{{ post.data.date.toString() }}</time>
+        <time datetime="">{{ post.data.date | dateFilter }}</time>
       {% else %}
-        <time datetime="">{{ page.date.toString() }}</time>
+        <time datetime="">{{ page.date | dateFilter }}</time>
       {% endif %}
     </p>
     <a href="{{ post.url }}" class="block">

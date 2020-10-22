@@ -1,9 +1,12 @@
 /* eslint-disable */
+const dateFilter = require('./src/filters/datefilter.js');
 
 module.exports = function (eleventyConfig) {
 
-	// Publish later
+	// Import filters
+	eleventyConfig.addFilter('dateFilter', dateFilter);
 
+	// Publish later
 	eleventyConfig.addCollection('posts', collection => {
 		// Check if draft is true in frontmatter - used to exclude from the collection
 		const isLive = post => !post.data.draft;
