@@ -70,3 +70,11 @@ Well. Just stuff I'd love to discover and get a handle on with this starter proj
 - Better template-data in the <head> of the page. Right now it is lacking a lot.
 - Add better webmanifest-data.
 - Clear difference between post and page templates (dates or not, category or not) in layout.
+
+## Known issues
+
+Here I just list a couple of issues, that I'm working on right now.
+
+### New pages and post do not have permalink rewritten on the fly
+
+I have pages.11tydata.js that I use to rewrite the permalink for the pages to the root. This is handled on initial build but not on the fly.

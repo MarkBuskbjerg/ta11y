@@ -25,6 +25,7 @@ module.exports = function (eleventyConfig) {
 
 	// Layout aliases
 	eleventyConfig.addLayoutAlias('base', 'layouts/base.njk');
+	eleventyConfig.addLayoutAlias('page', 'layouts/page.njk');
 	eleventyConfig.addLayoutAlias('single-post', 'layouts/single-post.njk');
 
 	// BrowserSync configuration
