@@ -1,4 +1,4 @@
-# A simple 11ty startersite using Tailwind CSS
+# A simple 11ty startersite using Tailwind CSS and AlpineJS
 
 A simple boilerplate built with Eleventy and TailwindCSS.
 
@@ -12,7 +12,7 @@ I try have it setup with a nice and simple starter design. But my main focus is 
 ## Features
 
 - Get started with a simple build process.
-- Easily handle drafts and scheduled posts both in production and development mode
+- Easily handle drafts and scheduled posts both in production and development mode.
 - Built with accessibility (A11Y) in mind - feel free to suggest optimizations.
 - Layouts are build with Search Engine Optimization (SEO) in mind.
 - Blog / article section (will be ready with categories).
@@ -58,6 +58,7 @@ Well. Just stuff I'd love to discover and get a handle on with this starter proj
 - Content with publish dates in the future is only visible in development. But I want to give them a clear [Scheduled] notice.
 - Clear difference between post and page templates (dates or not, category or not) in layout.
 - Create a structure for categories across the site.
+- Handling image and SVG-optimization
 - Better template-data in the <head> of the page. Right now it is lacking a lot.
 - Custom 404 (ready for Netlify).
 - Write about how the site is setup.
