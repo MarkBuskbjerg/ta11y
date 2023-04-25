@@ -1,35 +1,55 @@
 <header>
-  <nav class="max-w-2xl lg:max-w-5xl xl:max-w-5xl mx-auto px-4" x-data="{navOpen: false}">
-    <div class="flex flex-wrap justify-between lg:items-center lg:justify-left pb-8 pt-6 lg:px-0">
-      <div class="flex w-1/2 items-center justify-center italic text-black lg:w-1/4 bg-purple-300">
-        <a href="/" title="Ta11y starter project">
-          <span class="font-semibold text-2xl tracking-tight">ta11y</span>
-          <span class="text-2xl tracking-tight">.io</span>
-        </a>
-      </div>
-      <div class="flex justify-end w-1/2">
-        <button @click="navOpen = !navOpen" id="navTrigger" aria-label="Toggle the primary navigation" type="button" class="flex gap-2 p-2 rounded-md font-bold hover:bg-slate-100">
-          MENU
-          <svg x-show="!navOpen" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6 fill-current">
-            <path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path>
-          </svg>
-          <svg x-show="navOpen" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
-          </svg>
+  <div class="max-w-2xl lg:max-w-5xl xl:max-w-5xl mx-auto px-4" x-data="{navOpen: false}">
+    <nav>
+      <div class="flex flex-wrap justify-between lg:items-center lg:justify-left pb-8 pt-6 lg:px-0">
+        <div class="flex w-1/2 items-center justify-center italic text-black lg:w-1/4 bg-purple-300">
+          <a href="/" title="Ta11y starter project">
+            <span class="font-semibold text-2xl tracking-tight">ta11y</span>
+            <span class="text-2xl tracking-tight">.io</span>
+          </a>
+        </div>
+        <div class="flex justify-end w-1/2 gap-4 relative transition duration-1000">
+          <a href="https://github.com/MarkBuskbjerg/ta11y" class="hidden md:inline-flex items-center gap-x-1.5 rounded-md bg-gradient-to-br from-violet-800 via-purple-800 to-fuchsia-800 hover:from-violet-600 hover:via-purple-600 hover:to-fuchsia-600 focus:from-violet-600 focus:via-purple-600 focus:to-fuchsia-600 px-3 py-2 text-xs font-semibold text-white shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-600">
+            <svg class="-ml-0.5 h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.463 2 11.97c0 4.404 2.865 8.14 6.839 9.458.5.092.682-.216.682-.48 0-.236-.008-.864-.013-1.695-2.782.602-3.369-1.337-3.369-1.337-.454-1.151-1.11-1.458-1.11-1.458-.908-.618.069-.606.069-.606 1.003.07 1.531 1.027 1.531 1.027.892 1.524 2.341 1.084 2.91.828.092-.643.35-1.083.636-1.332-2.22-.251-4.555-1.107-4.555-4.927 0-1.088.39-1.979 1.029-2.675-.103-.252-.446-1.266.098-2.638 0 0 .84-.268 2.75 1.022A9.607 9.607 0 0 1 12 6.82c.85.004 1.705.114 2.504.336 1.909-1.29 2.747-1.022 2.747-1.022.546 1.372.202 2.386.1 2.638.64.696 1.028 1.587 1.028 2.675 0 3.83-2.339 4.673-4.566 4.92.359.307.678.915.678 1.846 0 1.332-.012 2.407-.012 2.734 0 .267.18.577.688.48 3.97-1.32 6.833-5.054 6.833-9.458C22 6.463 17.522 2 12 2Z"></path>
+            </svg>
+            GitHub
+          </a>
+          <button 
+            @click="navOpen = !navOpen"
+            id="navTrigger"
+            aria-controls="primaryNav"
+            aria-haspopup="true"
+            aria-label="Toggle the primary navigation"
+            :aria-expanded="navOpen ? 'true' : 'false'"
+            class="flex gap-2 pl-3 pr-3 py-2 rounded-md font-bold bg-gradient-to-br hover:from-violet-200 hover:via-purple-300 hover:to-fuchsia-400 focus:from-violet-200 focus:via-purple-300 focus:to-fuchsia-400"
+            :class="navOpen ? 'from-violet-200 via-purple-300 to-fuchsia-400' : ''"
+          >
+            MENU
+            <svg x-show="!navOpen" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6 fill-current">
+              <path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path>
+            </svg>
+            <svg x-show="navOpen" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
 
-        </button>
+          <ul x-show="navOpen" role="menu" id="primaryNav" class="absolute right-0 top-12 text-right rounded-md bg-gradient-to-br from-violet-200 via-purple-300 to-fuchsia-400">
+            <li class="" role="menuItem">
+              <a href="/" title="Features" class="nav-item block py-2 px-4 hover:underline rounded-t-md">Home</a>
+            </li>
+            <li class="" role="menuItem">
+              <a href="/features/" title="Features" class="nav-item block py-2 px-4 hover:underline">Features</a>
+            </li>
+            <li class="" role="menuItem">
+              <a href="/components/" title="Components" class="nav-item block py-2 px-4 hover:underline">Components</a>
+            </li>
+            <li class="" role="menuItem">
+              <a href="/posts/" title="Articles" class="nav-item block py-2 px-4 hover:underline rounded-b-md">Articles</a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <ul x-show="navOpen" id="primaryNav" class="pt-2 lg:pt-0 lg:items-center lg:justify-center w-full lg:w-2/4 lg:flex">
-        <li class="py-2 px-4">
-          <a href="/features/" title="Features" class="nav-item">Features</a>
-        </li>
-        <li class="py-2 px-4">
-          <a href="/components/" title="Components" class="nav-item">Components</a>
-        </li>
-        <li class="py-2 px-4">
-          <a href="/posts/" title="Articles" class="nav-item">Articles</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+    </nav>
+  </div>
 </header>

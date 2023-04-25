@@ -12,13 +12,12 @@ I try have it setup with a nice and simple starter design. But my main focus is 
 ## Features
 
 - Get started with a simple build process.
-- PurgeCSS to remove unused CSS.
+- Easily handle drafts and scheduled posts both in production and development mode
 - Built with accessibility (A11Y) in mind - feel free to suggest optimizations.
 - Layouts are build with Search Engine Optimization (SEO) in mind.
-- Buildproces using rollup.js.
 - Blog / article section (will be ready with categories).
 - Templated with Nunjucks (.njk).
-- Easily handle drafts and scheduled posts both in production and development mode
+- Free to use Nunjucks (.njk), Markdown (.md) or Liquid (.liquid) for all content
 
 ## Installation
 
@@ -40,14 +39,10 @@ This displays everything totally purged and without any drafts and scheduled pos
 
 Everything is contained inside the 'src' folder. Organized like this
 
-- styles (all css imported to \_main.css will be bundled and purged by default)
-- scripts (all js imported to \_main.js will be bundled in output by default)
 - views
-- \_data
+  -- pages
+  -- posts
 - \_includes
-- all the single content files as index.njk
-
-Note: I'm planning to rearrange the 'views' folder to better separate the content from partials and templates.
 
 ## Why did I build Ta11y?
 
@@ -61,15 +56,12 @@ Well. Just stuff I'd love to discover and get a handle on with this starter proj
 
 - Better dates (implement some sort of date filter).
 - Content with publish dates in the future is only visible in development. But I want to give them a clear [Scheduled] notice.
-- Better visuals for the navigation on small screens. Right now this is barely handled.
-- Custom 404.
-- Add a contact form.
-- Write about how the site is setup.
-- Create a structure for categories across the site.
-- Perhaps create some basic connection to Netlify CMS.
-- Better template-data in the <head> of the page. Right now it is lacking a lot.
-- Add better webmanifest-data.
 - Clear difference between post and page templates (dates or not, category or not) in layout.
+- Create a structure for categories across the site.
+- Better template-data in the <head> of the page. Right now it is lacking a lot.
+- Custom 404 (ready for Netlify).
+- Write about how the site is setup.
+- Add better webmanifest-data.
 
 ## Known issues
 
