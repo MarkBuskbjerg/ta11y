@@ -1,4 +1,6 @@
 /* eslint-disable */
+const { format } = require("date-fns");
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 module.exports = function (eleventyConfig) {
   // Publish later
@@ -7,7 +9,8 @@ module.exports = function (eleventyConfig) {
     // Check if draft is true in frontmatter - used to exclude from the collection
     const isLive = (post) => !post.data.draft;
 
-    // Check if date of a post is set in the future
+    // Check if date of a post is set in the
+    // TODO: This could probably be handled through a check on the frontmatter post.data.scheduled due to schedule(data) function in posts.11tydata.js
     const isScheduled = (post) => post.date <= new Date();
 
     // Removes the index.njk from the collection
@@ -27,11 +30,23 @@ module.exports = function (eleventyConfig) {
     }
   });
 
+  // Filters
+  // -----------------------------------------------------
+
+  //// Date filters
+  //// -----------------------------
+  eleventyConfig.addFilter("datefmt", (contentDate) => {
+    return format(contentDate, "LLL d'th' - yyyy");
+  });
+
   // BrowserSync configuration
   eleventyConfig.setBrowserSyncConfig({
     files: ["_site/**/*"],
     open: true,
   });
+
+  // Plugins
+  eleventyConfig.addPlugin(syntaxHighlight);
 
   // Simplify directories
   return {

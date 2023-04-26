@@ -1,10 +1,17 @@
 ---
 layout: base
 ---
-<h1>
+<div class="prose">
+  {% if scheduled %}
+    <span class="font-bold text-yellow-500"> [ Scheduled ] </span>
+  {% endif %}
   {% if draft %}
     <span class="font-bold text-red-500"> [ DRAFT ] </span>
-  {% endif %}{{ title }}
-</h1>
+  {% endif %}
+  <h1>
+    {{ title }}
+  </h1>
 
-{{ content | safe }}
+  {{ content | safe }}
+
+</div>
