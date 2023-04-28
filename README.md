@@ -19,6 +19,7 @@ I try have it setup with a nice and simple starter design. But my main focus is 
 - Templated with Nunjucks (.njk).
 - Free to use Nunjucks (.njk), Markdown (.md) or Liquid (.liquid) for all
 - Handle dates easily (use date-fns filters)
+- Syntax highlighting
 
 ## Installation
 
@@ -55,6 +56,7 @@ If you find it helpful in any way => I'm happy. If you have questions => Don't b
 
 Well. Just stuff I'd love to discover and get a handle on with this starter project.
 
+- Category structure based on tags
 - Clear difference between post and page templates (dates or not, category or not) in layout.
 - Create a structure for categories across the site.
 - Handling image and SVG-optimization

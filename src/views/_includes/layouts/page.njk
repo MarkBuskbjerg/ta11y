@@ -6,6 +6,9 @@ layout: base
         {% if draft %}
             <span class="font-bold text-red-500"> [ DRAFT ] </span>
         {% endif %}
+        {% if scheduled %}
+            <span class="font-bold text-yellow-500"> [ Scheduled ] </span>
+        {% endif %}
 
         {{ title }}
     </h1>

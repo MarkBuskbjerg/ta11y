@@ -1,0 +1,31 @@
+---
+title: How auto-generated tag-archives work in Ta11y
+tags: ['Guide']
+date: 2023-04-28
+---
+
+<p>Ta11y uses tags to sort all content in posts and automatically generate tag-archives with eleventy pagination.</p>
+
+<p>{{ date }}</p>
+
+{% highlight "html" %}
+// Sample YAML header from post
+---
+title: "This is the first post"
+tags: ['JavaScript', 'Tutorial']
+---
+{% endhighlight %}
+
+{% highlight "html" %}
+// Sample YAML header from post
+---
+title: "This is the second post"
+tags: ['UX Design', 'Tutorial']
+---
+{% endhighlight %}
+
+<p>This will generate three tag-archive pages:</p>
+
+<p>/category/javascript/ 👉 including the first post</p>
+<p>/category/ux-design/ 👉 including the second post</p>
+<p>/category/tutorial/ 👉 including both posts</p>

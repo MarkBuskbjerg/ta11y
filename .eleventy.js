@@ -30,8 +30,29 @@ module.exports = function (eleventyConfig) {
     }
   });
 
+  // Collections
+  // -----------------------------------------------------
+  eleventyConfig.addCollection("allPosts", (collection) => {
+    return collection
+      .getFilteredByGlob("src/views/posts/*")
+      .filter((item) => item.inputPath !== "./src/views/posts/index.njk");
+  });
+
+  // Return all the tags used in a collection - with heavy inspiration from eleventy-base-blog
+  eleventyConfig.addFilter("getAllTags", (collection) => {
+    let tagSet = new Set();
+    for (let item of collection) {
+      (item.data.tags || []).forEach((tag) => tagSet.add(tag));
+    }
+    return Array.from(tagSet);
+  });
+
   // Filters
   // -----------------------------------------------------
+  // A filter for the tag list – with heavy inspiration from eleventy-base-blog
+  eleventyConfig.addFilter("filterTagList", function filterTagList(tags) {
+    return (tags || []).filter((tag) => ["page", "post"].indexOf(tag) === -1);
+  });
 
   //// Date filters
   //// -----------------------------

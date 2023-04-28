@@ -1,0 +1,13 @@
+---
+title: Alle kategorier
+layout: single-post
+---
+
+<ul>
+    {% for tag in collections.all | getAllTags | filterTagList %}
+        {% set tagUrl %}/category/{{ tag | slugify }}/{% endset %}
+        <li>
+            <a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a>
+        </li>
+    {% endfor %}
+</ul>
