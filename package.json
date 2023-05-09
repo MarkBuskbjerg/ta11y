@@ -6,7 +6,7 @@
 	"scripts": {
 		"prod": "cross-env NODE_ENV=production ELEVENTY_ENV=production npm-run-all clean -p prod:*",
 		"prod:11ty": "eleventy --quiet",
-		"prod:css": "npx tailwindcss -i src/style.css -o _site/style.css -w",
+		"prod:css": "npx tailwindcss -i src/style.css -o _site/style.css",
 		"clean": "rimraf _site",
 		"dev": "cross-env NODE_ENV=development ELEVENTY_ENV=development npm-run-all clean -p dev:*",
 		"dev:11ty": "eleventy --serve --quiet",
