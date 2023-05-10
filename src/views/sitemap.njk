@@ -9,8 +9,8 @@ eleventyExcludeFromCollections: true
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     {% for page in collections.all %}
         {% if not page.data.draft %}
-            {% if page.data.metadata.robots == 'noindex' %}
-            {% elif page.data.metadata.sitemap == false %}
+            {% if page.data.seo.robots == 'noindex' %}
+            {% elif page.data.seo.sitemap == false %}
             {% else %}
                 <url>
                     <loc>{{ site.url }}{{ page.url | url }}</loc>

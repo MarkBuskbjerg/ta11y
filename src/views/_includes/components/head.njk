@@ -1,16 +1,19 @@
 <head>
     <meta charset="utf-8">
     <title>
-        {% if title %}{{ title }}
-        {% endif %}
+        {{ seo.title or title }}
     </title>
-    <meta name="description" content="">
+    <meta name="description" content="{{ seo.description or description }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% if seo.robots %}
+        <meta name="robots" content="{{ seo.robots }}"/>
+    {% endif %}
 
     <link rel="canonical" href="{{ page.url }}">
 
     <!-- Open Graph tags -->
-    <meta property="og:title" content="{% if title %}{{ title }}{% endif %}"/>
+    <meta property="og:title" content="{{ seo.title or title }}"/>
     <meta property="og:type" content=""/>
     <meta property="og:url" content=""/>
     <meta property="og:image" content=""/>

@@ -11,7 +11,7 @@ layout: base
 
   {% if tags %}
     {% for tag in tags %}
-      <a href="/category/{{ tag | slugify }}" class="relative z-10 rounded-full bg-gradient-to-br from-violet-50 via-purple-100 to-fuchsia-200 px-3 py-1.5 text-sm font-medium text-purple-800 hover:text-purple-50 hover:from-violet-700 hover:via-purple-800 hover:to-fuchsia-900 focus:text-purple-50 focus:from-violet-700 focus:via-purple-800 focus:to-fuchsia-900">{{ tag }}</a>
+      <a href="/category/{{ tag | slugify }}/" class="relative z-10 rounded-full bg-gradient-to-br from-violet-50 via-purple-100 to-fuchsia-200 px-3 py-1.5 text-sm font-medium text-purple-800 hover:text-purple-50 hover:from-violet-700 hover:via-purple-800 hover:to-fuchsia-900 focus:text-purple-50 focus:from-violet-700 focus:via-purple-800 focus:to-fuchsia-900">{{ tag }}</a>
     {% endfor %}
   {% endif %}
 </div>
