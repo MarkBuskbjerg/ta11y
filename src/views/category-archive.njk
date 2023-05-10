@@ -7,6 +7,8 @@ eleventyComputed:
     title: 'Articles in category: "{{ tag }}"'
 permalink: /category/{{ tag | slugify }}/
 layout: page
+metadata:
+    robots: noindex
 ---
 
 <ol>

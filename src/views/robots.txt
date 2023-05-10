@@ -1,4 +1,4 @@
 User-agent: *
 
 
-Sitemap: https://markbuskbjerg.dk/sitemap.xml
+Sitemap: https://ta11y.app/sitemap.xml
