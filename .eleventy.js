@@ -30,6 +30,9 @@ module.exports = function (eleventyConfig) {
     }
   });
 
+  // Pass through static assets
+  eleventyConfig.addPassthroughCopy("src/views/robots.txt");
+
   // Collections
   // -----------------------------------------------------
   eleventyConfig.addCollection("allPosts", (collection) => {
@@ -54,8 +57,8 @@ module.exports = function (eleventyConfig) {
     return (tags || []).filter((tag) => ["page", "post"].indexOf(tag) === -1);
   });
 
-  //// Date filters
-  //// -----------------------------
+  // Date filters
+  // -----------------------------
   eleventyConfig.addFilter("datefmt", (contentDate) => {
     return format(contentDate, "LLL d'th' - yyyy");
   });
