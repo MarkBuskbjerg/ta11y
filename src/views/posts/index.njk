@@ -23,7 +23,7 @@ permalink: /posts/
         {% endif %}
 
         {% for tag in post.data.tags %}
-          <a href="/category/{{ tag | slugify }}" class="relative z-10 rounded-full bg-gradient-to-br from-violet-50 via-purple-100 to-fuchsia-200 px-3 py-1.5 font-medium text-purple-800 hover:text-purple-950 hover:from-violet-200 hover:via-purple-300 hover:to-fuchsia-400 focus:text-purple-100 focus:from-violet-400 focus:via-purple-500 focus:to-fuchsia-600">{{ tag }}</a>
+          <a href="/category/{{ tag | slugify }}/" class="relative z-10 rounded-full bg-gradient-to-br from-violet-50 via-purple-100 to-fuchsia-200 px-3 py-1.5 font-medium text-purple-800 hover:text-purple-950 hover:from-violet-200 hover:via-purple-300 hover:to-fuchsia-400 focus:text-purple-100 focus:from-violet-400 focus:via-purple-500 focus:to-fuchsia-600">{{ tag }}</a>
         {% endfor %}
       </div>
       <div class="group relative">
