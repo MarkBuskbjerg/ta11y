@@ -3,16 +3,16 @@ layout: base
 ---
 <div class="prose">
     <h1>
-        {% if draft %}
+        {%- if draft -%}
             <span class="font-bold text-red-500"> [ DRAFT ] </span>
-        {% endif %}
-        {% if scheduled %}
+        {%- endif -%}
+        {%- if scheduled -%}
             <span class="font-bold text-yellow-500"> [ Scheduled ] </span>
-        {% endif %}
+        {%- endif -%}
 
-        {{ title }}
+        {{- title -}}
     </h1>
 
-    {{ content | safe }}
+    {{- content | safe -}}
 
 </div>
