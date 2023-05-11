@@ -25,13 +25,11 @@ seo:
 const { format } = require("date-fns");
 
 module.exports = function (eleventyConfig) {
-    
     // Date filter
     // -----------------------
-    eleventyConfig.addFilter("datefmt", (contentDate) => {
+    eleventyConfig.addFilter("datefmt", (contentDate) =&gt; {
         return format(contentDate, "LLL d'th' - yyyy");
     });
-
 }
 {%- endhighlight -%}
 
@@ -40,9 +38,9 @@ module.exports = function (eleventyConfig) {
 {%- highlight "html" -%}
 {%- raw -%}
     {%- if post.data.date -%}
-        <time datetime="{{- post.data.date -}}">{{- post.data.date | datefmt -}}</time>
+        <time&gt; datetime="{{- post.data.date -}}"&gt;{{- post.data.date | datefmt -}}</time&gt;
     {%- else -%}
-        <time datetime="{{ page.date }}">{{- page.date | datefmt -}}</time>
+        <time&gt; datetime="{{ page.date }}"&gt;{{- page.date | datefmt -}}</time&gt;
     {%- endif -%}
 {%- endraw -%}
 {%- endhighlight -%}
@@ -63,12 +61,12 @@ module.exports = function (eleventyConfig) {
 
 {%- highlight "js" -%}
 // From this
-eleventyConfig.addFilter("datefmt", (contentDate) => {
+eleventyConfig.addFilter("datefmt", (contentDate) =&gt; {
     return format(contentDate, "LLL d'th' - yyyy");
 });
 
 // To this
-eleventyConfig.addFilter("datefmt", (contentDate) => {
+eleventyConfig.addFilter("datefmt", (contentDate) =&gt; {
     return format(contentDate, "eeee, LLL d'th' - yyyy");
 });
 
