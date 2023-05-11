@@ -53,6 +53,8 @@ Well. I needed something specifically tailored for my own projects. I've open-so
 
 If you find it helpful in any way => I'm happy. If you have questions => Don't be a stranger :) If you find a bug => Please open an issue.
 
+## Customize quickly from site.js data-file
+
 ## Roadmap and ideas
 
 Well. Just stuff I'd love to discover and get a handle on with this starter project.
