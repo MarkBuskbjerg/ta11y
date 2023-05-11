@@ -17,8 +17,9 @@
 
     <!-- Open Graph tags -->
     <meta property="og:title" content="{{- seo.title or title -}}">
+    <meta property="og:description" content="{{- seo.description or description -}}">
     <meta property="og:type" content="">
-    <meta property="og:url" content="">
+    <meta property="og:url" content="{{- site.url -}}{{- page.url -}}">
     <meta property="og:image" content="">
 
     {#- <link rel="manifest" href="site.webmanifest"> -#}
