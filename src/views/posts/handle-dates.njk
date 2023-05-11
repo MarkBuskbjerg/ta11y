@@ -38,9 +38,9 @@ module.exports = function (eleventyConfig) {
 {%- highlight "html" -%}
 {%- raw -%}
     {%- if post.data.date -%}
-        <time&gt; datetime="{{- post.data.date -}}"&gt;{{- post.data.date | datefmt -}}</time&gt;
+        &lt;time&gt; datetime="{{- post.data.date -}}"&gt;{{- post.data.date | datefmt -}}&lt;/time&gt;
     {%- else -%}
-        <time&gt; datetime="{{ page.date }}"&gt;{{- page.date | datefmt -}}</time&gt;
+        &lt;time&gt; datetime="{{ page.date }}"&gt;{{- page.date | datefmt -}}&lt;/time&gt;
     {%- endif -%}
 {%- endraw -%}
 {%- endhighlight -%}
