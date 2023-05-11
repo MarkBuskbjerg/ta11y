@@ -6,9 +6,9 @@
     <meta name="description" content="{{ seo.description or description }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    {% if seo.robots %}
+    {%- if seo.robots -%}
         <meta name="robots" content="{{ seo.robots }}">
-    {% endif %}
+    {%- endif -%}
 
     <link rel="canonical" href="{{ page.url }}">
 
