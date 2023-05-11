@@ -1,24 +1,23 @@
 <head>
     <meta charset="utf-8">
     <title>
-        {{ seo.title or title }}
+        {{- seo.title or title -}}
     </title>
     <meta name="description" content="{{ seo.description or description }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    {%- if seo.robots -%}
+        <meta name="robots" content="{{- seo.robots -}}">
+    {%- endif -%}
 
-    {% if seo.robots %}
-        <meta name="robots" content="{{ seo.robots }}"/>
-    {% endif %}
-
-    <link rel="canonical" href="{{ page.url }}">
+    <link rel="canonical" href="{{- page.url -}}">
 
     <!-- Open Graph tags -->
-    <meta property="og:title" content="{{ seo.title or title }}"/>
-    <meta property="og:type" content=""/>
-    <meta property="og:url" content=""/>
-    <meta property="og:image" content=""/>
+    <meta property="og:title" content="{{- seo.title or title -}}">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
 
-    {# <link rel="manifest" href="site.webmanifest"> #}
+    {#- <link rel="manifest" href="site.webmanifest"> -#}
     <link rel="apple-touch-icon" href="icon.png">
     <!-- Place favicon.ico in the root directory -->
 

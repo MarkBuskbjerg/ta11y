@@ -19,41 +19,37 @@ seo:
 <h3>Initialize the filter</h3>
 <p>First we need to Initialize the filter in our 11ty setup. This is done in the file <code>.eleventy.js</code>.</p>
 
-{% highlight "js" %}
+{%- highlight "js" -%}
 // In .eleventy.js
 
 const { format } = require("date-fns");
 
 module.exports = function (eleventyConfig) {
-    
     // Date filter
     // -----------------------
-    eleventyConfig.addFilter("datefmt", (contentDate) => {
+    eleventyConfig.addFilter("datefmt", (contentDate) =&gt; {
         return format(contentDate, "LLL d'th' - yyyy");
     });
-
 }
-{% endhighlight %}
+{%- endhighlight -%}
 
 <p>Now we can use this filter on all date values in our eleventy-install. Like in this snip of code from the collection of posts:</p>
 
-{% highlight "html" %}
-{% raw %}
-    {% if post.data.date %}
-        <time datetime="{{ post.data.date }}">{{ post.data.date | datefmt }}</time>
-    {% else %}
-        <time datetime="{{ page.date }}">{{ page.date | datefmt }}</time>
-    {% endif %}
-{% endraw %}
-{% endhighlight %}
+{%- highlight "html" -%}
+{%- raw -%}
+    {%- if post.data.date -%}
+        &lt;time&gt; datetime="{{- post.data.date -}}"&gt;{{- post.data.date | datefmt -}}&lt;/time&gt;
+    {%- else -%}
+        &lt;time&gt; datetime="{{ page.date }}"&gt;{{- page.date | datefmt -}}&lt;/time&gt;
+    {%- endif -%}
+{%- endraw -%}
+{%- endhighlight -%}
 
-<p>So we can add it like a normal nunjucks-filter:</p>
-
-{% highlight "html" %}
-{% raw %}
-    {{ page.date | datefmt }}
+{%- highlight "html" -%}
+{%- raw -%}
+    {{- page.date | datefmt -}}
 {% endraw %}
-{% endhighlight %}
+{%- endhighlight -%}
 
 <h2>What if you wanted to include the weekday?</h2>
 <p>So ... let's say you wanted to display the weekday in the formatted date?</p>
@@ -61,17 +57,17 @@ module.exports = function (eleventyConfig) {
 
 <p>Just jump straight into <code>.eleventy.js</code> and alter this line:</p>
 
-{% highlight "js" %}
+{%- highlight "js" -%}
 // From this
-eleventyConfig.addFilter("datefmt", (contentDate) => {
+eleventyConfig.addFilter("datefmt", (contentDate) =&gt; {
     return format(contentDate, "LLL d'th' - yyyy");
 });
 
 // To this
-eleventyConfig.addFilter("datefmt", (contentDate) => {
+eleventyConfig.addFilter("datefmt", (contentDate) =&gt; {
     return format(contentDate, "eeee, LLL d'th' - yyyy");
 });
 
-{% endhighlight %}
+{%- endhighlight -%}
 
 <p>That is all it takes</p>
