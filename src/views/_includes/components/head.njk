@@ -9,7 +9,11 @@
         <meta name="robots" content="{{- seo.robots -}}">
     {%- endif -%}
 
-    <link rel="canonical" href="{{- page.url -}}">
+    {%- if seo.canonical -%}
+        <link rel="canonical" href="{{- seo.canonical -}}"/>
+    {%- else -%}
+        <link rel="canonical" href="{{- site.url -}}{{- page.url -}}">
+    {%- endif -%}
 
     <!-- Open Graph tags -->
     <meta property="og:title" content="{{- seo.title or title -}}">
