@@ -9,8 +9,7 @@
 		"prod:css": "npx tailwindcss -i src/style.css -o _site/style.min.css --minify",
 		"clean": "rimraf _site",
 		"dev": "cross-env NODE_ENV=development ELEVENTY_ENV=development npm-run-all clean -p dev:*",
-		"dev:11ty": "eleventy --serve --quiet",
-		"dev:css": "npx tailwindcss -i src/style.css -o _site/style.css --minify -w"
+		"dev:11ty": "eleventy --serve --quiet"
 	},
 	"repository": {
 		"type": "git",
@@ -40,6 +39,7 @@
 		"cross-env": "^7.0.2",
 		"date-fns": "^2.29.3",
 		"npm-run-all": "^4.1.5",
+		"postcss": "^8.4.23",
 		"request": "^2.88.2",
 		"rimraf": "^3.0.2",
 		"tailwindcss": "^3.3.2",
