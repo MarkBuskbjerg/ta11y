@@ -51,6 +51,7 @@ module.exports = function (eleventyConfig) {
 
 	// Pass through static assets
 	eleventyConfig.addPassthroughCopy('src/views/robots.txt');
+	eleventyConfig.addPassthroughCopy('src/views/manifest.json');
 
 	// Collections
 	// -----------------------------------------------------
