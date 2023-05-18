@@ -4,8 +4,25 @@
 	"description": "This is the ta11y 11ty starter project",
 	"start_url": "/",
 	"display": "standalone",
+	"display_override": ["window-control-overlay", "standalone", "browser"],
+	"lang": "en",
 	"background_color": "#ffffff",
 	"theme_color": "#000000",
+	"orientation": "portrait-primary",
+	"categories": ["education"],
+	"dir": "ltr",
+	"shortcuts": [
+		{
+			"name": "All articles",
+			"url": "/posts/",
+			"description": "Read the latest articles"
+		},
+		{
+			"name": "Features",
+			"url": "/features/",
+			"description": "See a list of all avaiable features"
+		}
+	],
 	"icons": [
 		{
 			"src": "/img/svg/android-chrome-192x192.png",
@@ -16,7 +33,7 @@
 			"src": "/img/svg/android-chrome-512x512.png",
 			"sizes": "512x512",
 			"type": "image/png",
-			"purpose": "maskable"
+			"purpose": "maskable any"
 		}
 	]
 }
