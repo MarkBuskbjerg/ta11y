@@ -3,6 +3,7 @@ const { format } = require('date-fns');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const tailwind = require('tailwindcss');
 const postCss = require('postcss');
+const pluginPWA = require('eleventy-plugin-pwa-v2');
 
 module.exports = function (eleventyConfig) {
 	// Registering a async filter to all nunjuck templates
@@ -52,6 +53,7 @@ module.exports = function (eleventyConfig) {
 	// Pass through static assets
 	eleventyConfig.addPassthroughCopy('src/views/robots.txt');
 	eleventyConfig.addPassthroughCopy('src/views/manifest.json');
+	eleventyConfig.addPassthroughCopy('src/views/img/svg/**.*');
 
 	// Collections
 	// -----------------------------------------------------
@@ -89,6 +91,7 @@ module.exports = function (eleventyConfig) {
 
 	// Plugins
 	eleventyConfig.addPlugin(syntaxHighlight);
+	eleventyConfig.addPlugin(pluginPWA);
 
 	// Simplify directories
 	return {
