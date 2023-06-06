@@ -10,7 +10,7 @@
     {%- endif -%}
 
     {%- if seo.canonical -%}
-        <link rel="canonical" href="{{- seo.canonical -}}"/>
+        <link rel="canonical" href="{{- seo.canonical -}}">
     {%- else -%}
         <link rel="canonical" href="{{- site.url -}}{{- page.url -}}">
     {%- endif -%}
@@ -23,7 +23,7 @@
     <meta property="og:image" content="">
     <link rel="apple-touch-icon" href="icon.png">
     <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#FFFFFF"/>
+    <meta name="theme-color" content="#FFFFFF">
     <script>
         if ("serviceWorker" in navigator) {
             navigator
