@@ -31,6 +31,7 @@
 	"homepage": "https://github.com/MarkBuskbjerg/ta11y#readme",
 	"devDependencies": {
 		"@11ty/eleventy": "^2.0.1",
+		"@11ty/eleventy-img": "^3.1.1",
 		"@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
 		"@tailwindcss/forms": "^0.5.3",
 		"@tailwindcss/typography": "^0.5.9",
@@ -39,6 +40,7 @@
 		"cross-env": "^7.0.2",
 		"date-fns": "^2.29.3",
 		"eleventy-plugin-pwa-v2": "^1.0.0",
+		"fs": "^0.0.1-security",
 		"npm-run-all": "^4.1.5",
 		"postcss": "^8.4.23",
 		"request": "^2.88.2",
